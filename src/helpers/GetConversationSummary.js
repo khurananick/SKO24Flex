@@ -7,8 +7,8 @@ export const getConverstationSummary = async (language, conversation) => {
 
     var data = JSON.stringify({ 
         language: language,
-        transcript: transcript,
-        Token: token       
+        //transcript: transcript,
+        //Token: token       
         });
 
     console.log('data', data)

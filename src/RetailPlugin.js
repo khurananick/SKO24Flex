@@ -29,8 +29,8 @@ export default class RetailPlugin extends FlexPlugin {
     });
     
     flex.AgentDesktopView.defaultProps.splitterOptions = {
-      initialFirstPanelSize: '500px',
-      minimumSecondPanelSize: '1200px',
+      //initialFirstPanelSize: '400px',
+      minimumSecondPanelSize: '1050px',
     };
 
     flex.AgentDesktopView.Panel2.Content.replace(

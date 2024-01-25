@@ -29,20 +29,20 @@ const ConversationSummary = (props) => {
     */
 
     
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     const getSummary = async () => {
-    //         console.log('getSummary')
-    //         let result = await getConverstationSummary()
-    //     }
+        const getSummary = async () => {
+            console.log('getSummary')
+            let result = await getConverstationSummary()
+        }
 
-    //     getSummary()
+         getSummary()
 
-    //     // fetch('https://your-serverless-function-url.com')
-    //     //   .then(response => response.json())
-    //     //   .then(data => setMessage(data.message))
-    //     //   .catch(error => console.error('Error:', error));
-    //   }, []);
+          fetch('https://serverless-2371-dev.twil.io')
+            .then(response => response.json())
+            .then(data => setMessage(data.message))
+            .catch(error => console.error('Error:', error));
+       }, []);
     
 
     let layout = (

@@ -37,11 +37,11 @@ class GoogleSpeechProvider {
   };
 
   write = (audio) => {
-    this.recognizeStream.write(audio);
+    try { this.recognizeStream.write(audio); } catch(e) {}
   };
 
   destroy = () => {
-    this.recognizeStream.destroy();
+    try { this.recognizeStream.destroy(); } catch(e){}
   };
 }
 
