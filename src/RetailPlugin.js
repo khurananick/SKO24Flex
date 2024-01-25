@@ -33,11 +33,7 @@ export default class RetailPlugin extends FlexPlugin {
       minimumSecondPanelSize: '1200px',
     };
 
-    flex.AgentDesktopView.Panel2.Content.replace(
-
-      <RetailWrapper key={"retailWrapper"}/>
-
-    )
+    flex.CRMContainer.Content.replace(<RetailWrapper key="retailWrapper" />);
 
   }
 }
