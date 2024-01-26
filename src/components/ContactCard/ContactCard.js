@@ -33,7 +33,7 @@ const ContactCard = (props) => {
 
     }
 
-    if (props.task) {
+    if (props.task && props.task?.attributes?.customerData) {
 
     let layout = (
         <div>

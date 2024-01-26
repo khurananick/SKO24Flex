@@ -33,7 +33,11 @@ export default class RetailPlugin extends FlexPlugin {
       minimumSecondPanelSize: '1050px',
     };
 
-    flex.CRMContainer.Content.replace(<RetailWrapper key="retailWrapper" />);
-
+    flex.Actions.addListener("afterSelectTask",  (payload, abortFunction) => {
+      if(payload?.task?.channelType === "voice")
+        flex.AgentDesktopView.Panel2.Content.replace(<RetailWrapper key={"retailWrapper"}/>)
+      else
+        flex.AgentDesktopView.Panel2.Content.replace(<NoActiveTask key={"noActiveTask"} />);
+   });
   }
 }
